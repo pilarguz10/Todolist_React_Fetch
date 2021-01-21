@@ -4,6 +4,11 @@ import { Button } from "bootstrap";
 export function TaskList(e) {
 	const [task, setTask] = useState([]);
 	const [text, setText] = useState("");
+
+	const styleObj = {
+		color: "black"
+	};
+
 	let TextValue = e => {
 		setText(e.target.value);
 	};
@@ -39,22 +44,31 @@ export function TaskList(e) {
 		);
 	});
 	return (
-		<div className="card container ">
-			<h1>To do List</h1>
-			<input
-				id="inforeceive"
-				className="myInput"
-				type="text"
-				placeholder="Add task"
-				onChange={e => TextValue(e)}
-				onKeyPress={event => {
-					TaskAdd(event);
-				}}
-			/>
-			<ul id="myUlist" className="myUl">
-				{listItem}
-			</ul>
-			<p>{task.length + ""} Tareas</p>
+		<div className="container">
+			<div className="card container ">
+				<div className="pin">
+					<i className="fas fa-thumbtack fa-lg" />
+				</div>
+				<h1 style={styleObj}>TO DO LIST</h1>
+				<input
+					id="inforeceive"
+					className="myInput"
+					type="text"
+					placeholder="Add task"
+					onChange={e => TextValue(e)}
+					onKeyPress={event => {
+						TaskAdd(event);
+					}}
+				/>
+				<ul id="myUlist" className="myUl">
+					{listItem}
+				</ul>
+				<div>
+					<span className="badge badge-light">
+						{task.length + ""} Tareas
+					</span>
+				</div>
+			</div>
 		</div>
 	);
 }

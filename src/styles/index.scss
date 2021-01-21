@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 /* 
 
@@ -25,9 +26,30 @@ li:before {
 }
 
 .card{
-  //  background-image: url("https://thumbs.dreamstime.com/z/papel-del-llenador-del-cuaderno-9156988.jpg");
     background-image: url("https://i.pinimg.com/originals/68/34/20/683420098faac1e27a55280c6fead466.jpg");
-    background-repeat: no-repeat;
+    //background-repeat: no-repeat;
     background-position:center ;
+    border:none;
+    width: 800px;
 }
+
+body{
+    background-image: url("https://previews.123rf.com/images/samsem/samsem1203/samsem120300041/12857642-vaciar-tabl%C3%B3n-de-anuncios-de-corcho-con-chinchetas-de-colores-en-la-esquina-.jpg") ;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+ .fa-thumbtack{
+float: left;
+color: darkmagenta;
+}
+
+h1{
+    font-family: 'Indie Flower';
+}
+
+
 
