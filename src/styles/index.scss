@@ -11,3 +11,23 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+ul{
+    list-style-type: none;
+}
+
+
+li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+
+}
+
+.card{
+  //  background-image: url("https://thumbs.dreamstime.com/z/papel-del-llenador-del-cuaderno-9156988.jpg");
+    background-image: url("https://i.pinimg.com/originals/68/34/20/683420098faac1e27a55280c6fead466.jpg");
+    background-repeat: no-repeat;
+    background-position:center ;
+}
+

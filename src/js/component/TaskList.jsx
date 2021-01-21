@@ -4,23 +4,22 @@ import { Button } from "bootstrap";
 export function TaskList(e) {
 	const [task, setTask] = useState([]);
 	const [text, setText] = useState("");
-	let MyTextValue = e => {
+	let TextValue = e => {
 		setText(e.target.value);
 	};
-	let MyTaskAdder = event => {
+	let TaskAdd = event => {
 		if (event.key === "Enter") {
 			let newTask = event.target.value;
 			if (newTask) {
 				setTask(task => [...task, text]);
-				// console.log(task);
-				let myList = document.querySelector("#inputRecive");
-				myList.value = "";
+				let lista = document.querySelector("#inforeceive");
+				lista.value = "";
 			}
 		}
 	};
-	let MyTaskDelete = i => {
+
+	let TaskDelete = i => {
 		task.splice(i, 1);
-		console.log(task);
 	};
 
 	const [listItem, setListItem] = useState(null);
@@ -31,10 +30,8 @@ export function TaskList(e) {
 				return (
 					<li key={i} className="myLi">
 						{taskitem}
-						<button
-							className="hide btn"
-							onClick={() => MyTaskDelete(i)}>
-							<i className="far fa-times-circle" />
+						<button className="btn" onClick={() => TaskDelete(i)}>
+							<i className="fas fa-backspace" />
 						</button>
 					</li>
 				);
@@ -42,16 +39,16 @@ export function TaskList(e) {
 		);
 	});
 	return (
-		<div className="card container">
+		<div className="card container ">
 			<h1>To do List</h1>
 			<input
-				id="inputRecive"
+				id="inforeceive"
 				className="myInput"
 				type="text"
-				placeholder="New Task"
-				onChange={e => MyTextValue(e)}
+				placeholder="Add task"
+				onChange={e => TextValue(e)}
 				onKeyPress={event => {
-					MyTaskAdder(event);
+					TaskAdd(event);
 				}}
 			/>
 			<ul id="myUlist" className="myUl">
