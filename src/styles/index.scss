@@ -26,6 +26,7 @@ ul{
     background-position:center ;
     border:none;
     width: 800px;
+    opacity: 0.85;
 }
 
 body{
@@ -52,3 +53,7 @@ h1{
 .btn { position: absolute; right: 0; }
 
 .myLi { flex: 1; text-align: center; }
+
+#myUlist{
+       font-family: 'Indie Flower';
+}
