@@ -33,12 +33,17 @@ export function TaskList(e) {
 		setListItem(
 			task.map((taskitem, i) => {
 				return (
-					<li key={i} className="myLi">
-						{taskitem}
-						<button className="btn" onClick={() => TaskDelete(i)}>
-							<i className="fas fa-backspace" />
-						</button>
-					</li>
+					<div className="listItem">
+						<li key={i} className="myLi">
+							{taskitem}
+
+							<button
+								className="btn"
+								onClick={() => TaskDelete(i)}>
+								<i className="fas fa-times" />
+							</button>
+						</li>
+					</div>
 				);
 			})
 		);
