@@ -34,6 +34,24 @@ export const TaskList = () => {
 		});
 	};
 
+	const dltAll = url => {
+		fetch(url, {
+			method: "DELETE",
+			headers: {
+				"content-type": "application/json"
+			}
+		})
+			.then(response => response.json())
+			.then(data => console.log(data))
+			.catch(error => console.log(error));
+	};
+
+	const deleteAll = () => {
+		setListElement([]);
+		setTaskApi([]);
+		dltAll(url);
+	};
+
 	//Función para marcar como "realizada una tarea"
 	const isDone = indexToCross => {
 		setTaskApi(
@@ -176,8 +194,9 @@ export const TaskList = () => {
 					<span className="badge badge-light">
 						{taskApi.length} Tareas
 					</span>
-					<button class="btn">
-						<i class="fa fa-trash" />
+
+					<button onClick={deleteAll} className="btn">
+						<i className="fa fa-trash" />
 					</button>
 				</div>
 			</div>
