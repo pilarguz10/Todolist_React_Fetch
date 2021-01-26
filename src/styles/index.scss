@@ -50,10 +50,31 @@ h1{
 .listItem{
     display: flex;
 }
-.btn { position: absolute; right: 0; }
 
-.myLi { flex: 1; text-align: center; }
+
+
+
+ .myLi { flex: 1; text-align: center; }
 
 #myUlist{
        font-family: 'Indie Flower';
 }
+
+.btnRemove{
+    border: none;
+    background: none;
+    position: absolute;
+    right: 30px;
+}
+
+
+.btnVisible
+{  
+    background: none;
+    position: absolute; right: 0; 
+}
+
+.taskDone{
+    text-decoration: line-through;
+}
+
