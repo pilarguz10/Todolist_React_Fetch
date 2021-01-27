@@ -34,22 +34,22 @@ export const TaskList = () => {
 		});
 	};
 
-	const dltAll = url => {
-		fetch(url, {
-			method: "DELETE",
-			headers: {
-				"content-type": "application/json"
-			}
-		})
-			.then(response => response.json())
-			.then(data => console.log(data))
-			.catch(error => console.log(error));
-	};
+	// const dltAll = url => {
+	// 	fetch(url, {
+	// 		method: "DELETE",
+	// 		headers: {
+	// 			"content-type": "application/json"
+	// 		}
+	// 	})
+	// 		.then(response => response.json())
+	// 		.then(data => console.log(data))
+	// 		.catch(error => console.log(error));
+	// };
 
 	const deleteAll = () => {
-		setListElement([]);
+		//	setListElement([]);
 		setTaskApi([]);
-		dltAll(url);
+		//dltAll(url);
 	};
 
 	//Función para marcar como "realizada una tarea"
@@ -132,8 +132,6 @@ export const TaskList = () => {
 						crossTask += " taskDone";
 					}
 					return (
-						//<div className={crossTask}
-
 						<li key={index} className={crossTask}>
 							{task.label}
 							<button
@@ -151,8 +149,6 @@ export const TaskList = () => {
 								<i className="fas fa-check" />
 							</button>
 						</li>
-
-						//</div>
 					);
 				})
 			);
